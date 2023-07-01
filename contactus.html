@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT US</title>
+  <style>
+    *{
+      font-family: 'Poppins', sans-serif;
+      margin:0; padding:0;
+      box-sizing: border-box;
+      text-decoration: none;
+      outline: none; border:none;
+      transition:all .2s linear;
+      
+
+    }
+
+    .contact-title {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem;
+      margin-bottom: 8rem;
+    }
+
+    .message .row{
+      display: flex;
+      background:#fff;
+      margin:3rem 8rem;
+      overflow: hidden;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+      border-radius: 1rem;
+      min-height: 70vh;
+    }
+
+    .message .row .image{
+      flex:1 1 50%;
+    }
+
+    .message .row .image img{
+      height:100%;
+      width:100%;
+      object-fit: cover;
+    }
+
+    .message .row form{
+      flex:1 1 50%;
+      background:#fff;
+      padding:3rem;
+    }
+
+    .message .row form .box{
+      padding:1rem;
+      margin:1rem 0;
+      font-size: 1.5rem;
+      color:var(--dark);
+      text-transform: none;
+      background:#f0f0f0;
+      width:100%;
+    }
+    button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+footer{
+    
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+
+
+    .message .row form .box::placeholder{
+      text-transform: capitalize;
+    }
+
+   /*ithe media queries taklya ahet ekda bghun ghe correct ahet ka */
+    @media only screen and (max-width: 884px) {
+      .message .row {
+        margin: 3rem;
+      }
+    }
+
+    @media only screen and (max-width: 678px) {
+      .message .row {
+        flex-direction: column;
+        margin: 1rem;
+      }
+      .message .row .image {
+        flex: 1 1 100%;
+      }
+      .message .row form {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media only screen and (max-width: 428px) {
+      .message .row {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="message" id="contact">
+    <div class="contact-title">
+      <h3 class="title"> Contact us</h3>
+    </div>
+    <div class="row">
+      <div class="image">
+        <img src="images/contact.jpg" alt="">
+      </div>
+      <form action="https://formspree.io/f/xwkdekob" method="POST">
+        <input type="text" placeholder="Your Name/Business Name" class="box" name="name">
+        <input type="email" placeholder="Your Email/Business Email" class="box" name="email">
+        <input type="number" placeholder="Contact Number" class="box">
+        <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="More Description(optional)" name="message"></textarea>
+        <button type="submit" value="submit" class="btn">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+          <span>Send</span>
+        </button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-content">
+        <h3>Hyperbolic Designs</h3>
+        <p>Why settle for a normal website when you can have a Hyperbolic one!</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;HyperbolicDesigns 2023. designed by <span>Hyperbolic designs</span></p>
+    </div>
+</footer>
+
+</body>
+</html>

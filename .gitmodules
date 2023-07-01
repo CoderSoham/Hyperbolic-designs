@@ -1,0 +1,6 @@
+[submodule "homeverse"]
+	path = homeverse
+	url = https://github.com/codewithsadee/homeverse
+[submodule "HyperbolicDevices"]
+	path = HyperbolicDevices
+	url = https://github.com/wpcodevo/phone_website
